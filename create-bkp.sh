@@ -7,7 +7,7 @@ if [ $# -eq 0 ]; then
 fi
 
 filename=$1
-backup_file="${filename}_$(date +%Y%m%d%H%M%S)"
+backup_file="${filename}_$(date +%Y-%-m-%d_%H:%M:%S)"
 
 # Check if the file exists
 if [ ! -e "$filename" ]; then

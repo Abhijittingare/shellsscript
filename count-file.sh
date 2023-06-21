@@ -10,7 +10,7 @@ if [ ! -d "$directory" ]; then
 fi
 
 # Count the number of files in the directory
-file_count=$(find "$directory" -type f | wc -l)
+file_count=$(find "$directory" -type f -not -path '*/\.*' | wc -l)
 
 # Display the file count
 echo "Number of files in '$directory': $file_count"
